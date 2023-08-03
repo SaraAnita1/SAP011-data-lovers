@@ -1,5 +1,79 @@
 # Data Lovers
 
+
+
+
+<img align="right" alt="Prototipo do projeto" height="150" style="border-radius: 50px;" img src="/src/assets/image.png
+" />
+
+
+
+## Definição do produto
+
+
+Aplicação Web para visualização de filmes do Studio Ghibli.
+
+
+
+## Histórias de usuário
+
+
+1.
+Eu como usuário da aplicação Studio Ghibli
+Quero visualizar os filmes do Studio Ghibli
+Para que eu possa ver todos fimes do catálogo e suas informações relevantes
+
+Critérios de aceite:
+
+
+Deve conter imagem, nome, ano, diretor, produtor e sinopse
+
+
+2.
+Eu como usuário da aplicação Studio Ghibli
+Quero visualizar os filmes do Studio Ghibli
+Para que eu possa filtrar por nome, score e data de lançamento
+
+
+Critérios de aceite:
+
+
+Deve conter ícones de filtros por nome, score e data de lançamento
+Deve haver uma opção de limpar filtros
+
+
+3.
+Eu como usuário da aplicação Studio Ghibli
+Quero visualizar os filmes do Studio Ghibli
+Para que eu possa ordenar os filmes de A a Z e de Z a A
+
+
+Critérios de aceite:
+
+
+Deve conter um ícone para ordenar de A a Z e de Z a A
+
+
+4.
+Eu como usuário da aplicação Studio Ghibli
+Quero visualizar os filmes do Studio Ghibli
+Para que eu possa visualizar as estatísticas por score.
+
+
+Critérios de aceite:
+
+
+Ao clicar em uma opção do score, mostra a estatística para aquele score.
+
+## Definição de Pronto
+ 
+Serão consideradas prontas as funcionalidades que passarem pelas verificações,  testes de usabilidade e testes unitários.
+
+
+
+
+
+
 ## Índice
 
 * [1. Preâmbulo](#1-preâmbulo)
@@ -309,16 +383,7 @@ resolver o problema (ou problemas) de seu usuário.
 
 ### Histórias de usuário
 
-Uma vez que entenda a necessidade dos usuários, escreva as [Historias de
-Usuario](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_usu%C3%A1rio) que
-representem tudo que o usuário precisa fazer/ver. As **histórias de usuário**
-devem ser o resultado de seu processo de investigação/pesquisa de seus usuários.
 
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
-
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
 
 ### Desenho de interface do usuário
 
