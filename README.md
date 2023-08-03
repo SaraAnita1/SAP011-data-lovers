@@ -2,10 +2,7 @@
 
 
 
-
-<img align="right" alt="Prototipo do projeto" height="150" style="border-radius: 50px;" img src="/src/assets/image.png
-" />
-
+![protótipo](/src/assets/image.png)
 
 
 ## Definição do produto
