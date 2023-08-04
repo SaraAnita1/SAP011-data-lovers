@@ -1,14 +1,13 @@
 # Data Lovers
 
 
-
-![protótipo](/src/assets/image.png)
+![protótipo](/src/assets/image%20(1).png)
 
 
 ## Definição do produto
 
 
-Aplicação Web para visualização de filmes do Studio Ghibli.
+Aplicação Web para visualização de filmes do Studio Ghibli em que o usuário possa conhecer um pouco mais sobre esse universo. 
 
 
 
@@ -18,12 +17,12 @@ Aplicação Web para visualização de filmes do Studio Ghibli.
 1.
 Eu como usuário da aplicação Studio Ghibli
 Quero visualizar os filmes do Studio Ghibli
-Para que eu possa ver todos fimes do catálogo e suas informações relevantes
+Para que eu possa ver todos filmes do catálogo e suas informações relevantes
 
 Critérios de aceite:
 
 
-Deve conter imagem, nome, ano, diretor, produtor e sinopse
+* Deve conter imagem, nome, ano, diretor, produtor e sinopse
 
 
 2.
@@ -35,8 +34,8 @@ Para que eu possa filtrar por nome, score e data de lançamento
 Critérios de aceite:
 
 
-Deve conter ícones de filtros por nome, score e data de lançamento
-Deve haver uma opção de limpar filtros
+* Deve conter ícones de filtros por nome, score e data de lançamento
+* Deve haver uma opção de limpar filtros
 
 
 3.
@@ -48,7 +47,7 @@ Para que eu possa ordenar os filmes de A a Z e de Z a A
 Critérios de aceite:
 
 
-Deve conter um ícone para ordenar de A a Z e de Z a A
+* Deve conter um ícone para ordenar de A a Z e de Z a A
 
 
 4.
@@ -60,11 +59,11 @@ Para que eu possa visualizar as estatísticas por score.
 Critérios de aceite:
 
 
-Ao clicar em uma opção do score, mostra a estatística para aquele score.
+* Ao clicar em uma opção do score, mostra a estatística para aquele score.
 
 ## Definição de Pronto
  
-Serão consideradas prontas as funcionalidades que passarem pelas verificações,  testes de usabilidade e testes unitários.
+Serão consideradas prontas as funcionalidades que passarem pelas verificações, testes de usabilidade e testes unitários.
 
 
 
