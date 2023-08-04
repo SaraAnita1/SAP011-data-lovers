@@ -1,9 +1,11 @@
 # Data Lovers
-
+## Protótipo de baixa fidelidade
 
 ![protótipo](/src/assets/image%20(1).png)
 
+## Protótipo de alta fidelidade
 
+![protótipo de alta fidelidade](/src/assets/Captura%20de%20tela%202023-08-04%20111927.png)
 ## Definição do produto
 
 
@@ -22,7 +24,7 @@ Para que eu possa ver todos filmes do catálogo e suas informações relevantes
 Critérios de aceite:
 
 
-* Deve conter imagem, nome, ano, diretor, produtor e sinopse
+* Deve conter imagem, nome, ano, diretor, produtor, sinopse e personagens
 
 
 2.
