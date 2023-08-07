@@ -2,11 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Data Lovers Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    <div id="root"></div>
+    <main>
+      <div id="containerImagem">
+        
+    </div>
+    <div id="titulo">
+    <h1>STUDIO GHIBLI</h1>
+    <br>
+    <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
+  </div>
+      <div>
+        <select name="ordenar"> 
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
+        <input type="button" value="Estatísticas">
+      <label for="pesquisar">Pesquise aqui:</label>
+      <input id="pesquisar" type="search">
+      <button>Pesquisar</button>
+      </div>
+      <p id="estatistica">% do score</p>
+      <div id="card">
+        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="imagem do filme">
+        <h3>Título:</h3>
+        <p id="ano">Ano:</p>
+        <p id="diretor">Diretor:</p>
+        <p id="diretor">Produtor:</p>
+        <p id="sinopse">Sinopse:</p>
+        <p id="personagens">Personagens:</p>
+      </div>
+    </main>
+    
     <script src="main.js" type="module"></script>
+
   </body>
 </html>

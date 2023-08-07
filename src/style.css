@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 , h2 {
+    color: white;
+   
+}
+body {
+    background-color: #76BCE3;
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    
+
+} 
+
+#titulo {
+    position: absolute;
+  top: 25%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+#containerImagem {
+background-image: url(/src/assets/Studio_Ghibli_Logo.0.jpg);
+height: 60vh;
+width: auto;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+z-index: -1;
+position: relative;
+overflow: hidden;
+
+}
