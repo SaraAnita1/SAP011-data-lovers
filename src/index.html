@@ -9,33 +9,42 @@
   <body>
     <main>
       <div id="containerImagem">
-        
-    </div>
+      </div>
     <div id="titulo">
-    <h1>STUDIO GHIBLI</h1>
+      <h1>STUDIO GHIBLI</h1>
     <br>
-    <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
-  </div>
-      <div>
+      <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
+      <div id="barraBusca">
         <select name="ordenar"> 
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
         </select>
+        <div id="estatistica">
         <input type="button" value="Estatísticas">
-      <label for="pesquisar">Pesquise aqui:</label>
-      <input id="pesquisar" type="search">
-      <button>Pesquisar</button>
+        <p>% do score</p>
+        </div>
+      <div id="pesquisar">
+        
+        <input id="pesquisar" type="search" placeholder="Pesquise aqui o filme">
+        <button>Pesquisar</button>
       </div>
-      <p id="estatistica">% do score</p>
-      <div id="card">
-        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="imagem do filme">
-        <h3>Título:</h3>
-        <p id="ano">Ano:</p>
-        <p id="diretor">Diretor:</p>
-        <p id="diretor">Produtor:</p>
-        <p id="sinopse">Sinopse:</p>
-        <p id="personagens">Personagens:</p>
+    </div>
+    </div> 
+    <div id="displayCards">           
+    <div id="card">
+      <div id="cardImg">
+      <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" height="100%" width="100%" alt="imagem do filme">
       </div>
+      <div id="cardDescricao">
+      <h3>Título:</h3>
+      <p id="ano">Ano:</p>
+      </div>
+      <!-- <p id="diretor">Diretor:</p>
+      <p id="diretor">Produtor:</p>
+      <p id="sinopse">Sinopse:</p>
+      <p id="personagens">Personagens:</p> -->
+    </div>
+    </div> 
     </main>
     
     <script src="main.js" type="module"></script>
