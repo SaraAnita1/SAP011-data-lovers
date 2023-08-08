@@ -12,7 +12,7 @@ body {
     background-color: #76BCE3;
     font-family: 'Quicksand', sans-serif;
     height: 100%;
-    
+    border: red solid 2px;
 
 } 
 
@@ -26,6 +26,7 @@ body {
   text-align: center;
   padding: 20px;
   z-index: 1;
+  border: red solid 2px;
   
 }
 
@@ -41,6 +42,7 @@ z-index: -1;
 position: relative;
 overflow: hidden;
 opacity: 40%;
+border: red solid 2px;
 
 }
 
@@ -48,48 +50,52 @@ opacity: 40%;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-    
+    margin-top: 10vh;
     height: 30%;
     z-index: 1;
+    border: red solid 2px;
 }
 
 #barraBusca , #card {
     margin: 1%;
     padding: 1%;
-    
+    border: red solid 2px;
 }
 
     
 #pesquisar {
     justify-content: flex-end;
-    
+    border: red solid 2px;
 }
 #estatistica {
     justify-content: center;
     display: flex;
     flex-direction: row;
     gap: 5px;
+    border: red solid 2px;
 }
 #card {
     width: 20%;
     height: 5%;
     border-radius: 8px;
     background-color: #9CD4D1;
-    
+    border: red solid 2px;
 }
 #cardImg {
    align-items: center;
    
    object-fit: contain;
-    
+   border: red solid 2px; 
 }
 #cardDescricao {
    
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    border: red solid 2px;
 }
 #displayCards {
    
     padding: 5%;
+    border: red solid 2px;
 }
