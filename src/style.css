@@ -12,7 +12,7 @@ h1 , h2 , h4 {
 
 #cabecalhoImagem {
     background-image: url(/src/assets/Studio_Ghibli_Logo.0.jpg);
-    position: absolute;
+    position: relative;
     height: 60vh;
     width: auto;
     background-attachment: fixed;
@@ -20,14 +20,13 @@ h1 , h2 , h4 {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    position: relative;
     overflow: hidden;
     opacity: 80%;
     border: red solid 2px;
 }
 
 #titulo {
-    top: 35%;
+    top: 15%;
     left: 50%;
     position: relative;
     transform: translate(-50%, -50%);
@@ -39,7 +38,7 @@ h1 , h2 , h4 {
 
 #barraBusca {
     position: relative;
-    top: 50%;
+    top: 10%;
     border: yellow solid 2px;
     display: grid;
     grid-template-columns: 9% 10% 65%;
@@ -57,7 +56,7 @@ h1 , h2 , h4 {
 #score {
     position: relative;
     border: white solid 2px;
-    top: 55%;
+    top: 10%;
     text-align: center;
 }
 
@@ -70,10 +69,7 @@ h1 , h2 , h4 {
 #cardImg {
     margin-top: 20px;
     margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    align-items: center;
-    object-fit: contain;
+    margin-right: 20px;    
     border: purple solid 2px; 
 }
 #cardDescricao {
@@ -84,11 +80,9 @@ h1 , h2 , h4 {
     display: flex;
     justify-content: space-between;
     font-size: x-small;
-    
     border: gray solid 2px;
 }
 #displayCards {
-    
     
     padding: 5%;
     border: rgb(237, 18, 215) solid 2px;
