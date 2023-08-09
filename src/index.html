@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   </head>
   <body>
     <main>
       <section id="cabecalhoImagem">
         <div id="titulo">
-      <h1>STUDIO GHIBLI</h1>
-      <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
-       </div>
+          <h1>STUDIO GHIBLI</h1>
+          <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
+        </div>
         <div id="barraBusca">
           <div id="ordenarAz">
-          <select name="ordenar"> 
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select>
+            <select name="ordenar">
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
+            </select>
           </div>
           <div>
-          <input type="button" value="Estatísticas">
+            <input type="button" value="Estatísticas" />
           </div>
           <div id="pesquisar">
-            <input id="pesquisar" type="search" placeholder="Pesquise aqui o filme">
+            <input
+              id="pesquisar"
+              type="search"
+              placeholder="Pesquise aqui o filme"
+            />
             <button>Pesquisar</button>
           </div>
         </div>
@@ -33,15 +36,21 @@
           <h4>% do score</h4>
         </div>
       </section>
-      <section id="displayCards">         
-        <div id="card">
-          <div id="cardImg">
-          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" height="100%" width="100%" alt="imagem do filme">
+      <section id="displayCards">
+        <div class="card">
+          <div class="cardImg">
+            <!-- <img
+              src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
+              height="100%"
+              width="100%"
+              alt="imagem do filme"
+            /> -->
           </div>
-          <div id="cardDescricao">
-          <p>Título:</p>
-          <p>Ano:</p>
+          <div class="cardDescricao">
+            <p><strong>Título:</strong></p>
+            <p><strong>Ano:</strong></p>
           </div>
+
           <!-- <h6 id="diretor">Diretor:</h6>
           <h6 id="diretor">Produtor:</h6>
           <h6 id="sinopse">Sinopse:</h6>
