@@ -8,21 +8,20 @@
   </head>
   <body>
     <main>
-      <section id="cabecalhoImagem">
+      <div id="cabecalhoImagem">
         <div id="titulo">
           <h1>STUDIO GHIBLI</h1>
           <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
         </div>
-        <div id="barraBusca">
+        <header id="barraBusca">
           <div id="ordenarAz">
             <select name="ordenar">
               <option value="A-Z">A-Z</option>
               <option value="Z-A">Z-A</option>
             </select>
           </div>
-          <div>
-            <input type="button" value="Estatísticas" />
-          </div>
+
+          <input type="button" value="Estatísticas" />
           <div id="pesquisar">
             <input
               id="pesquisar"
@@ -31,32 +30,12 @@
             />
             <button>Pesquisar</button>
           </div>
-        </div>
-        <div id="score">
-          <h4>% do score</h4>
-        </div>
-      </section>
-      <section id="displayCards">
-        <div class="card">
-          <div class="cardImg">
-            <!-- <img
-              src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
-              height="100%"
-              width="100%"
-              alt="imagem do filme"
-            /> -->
-          </div>
-          <div class="cardDescricao">
-            <p><strong>Título:</strong></p>
-            <p><strong>Ano:</strong></p>
-          </div>
-
-          <!-- <h6 id="diretor">Diretor:</h6>
-          <h6 id="diretor">Produtor:</h6>
-          <h6 id="sinopse">Sinopse:</h6>
-          <h6 id="personagens">Personagens:</h6> -->
-        </div>
-      </section>
+        </header>
+        <h4 id="score">% do score</h4>
+      </div>
+      <div class="card">
+        <div class="descricao"></div>
+      </div>
     </main>
     <script src="main.js" type="module"></script>
   </body>

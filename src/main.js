@@ -1,28 +1,21 @@
+import dados from "./data/ghibli/ghibli.js";
 
-
-import dados from './data/ghibli/ghibli.js'
-
-const cardContainer = document.querySelector(".card")
-const descricao = document.querySelector(".cardDescricao")
-
-
- 
-cardContainer.innerHTML = ghibli
-descricao.innerHTML = ghibli
-// console.log(dados.films[0].title) como chamar uma propriedade especifica.
+const cardContainer = document.querySelector(".card");
 
 const ghibli = dados.films;
 
-dados.map( ghibli => `
-      <div class="card">
-      <img class="cardImg"  scr=${ghibli[0].poster}>
-      </div>
-      
-    `
-)
+let card = "";
 
-//    <div class="cardDescricao">
-//       <p><strong>Título:</strong>${dados.films[0].title}</p>
-//       console.log(`dados,films[0].title`)
-//       <p><strong>Ano:</strong>${dados.films[0].release_date}</p>
-//       </div>
+ghibli.map((filme) => {
+  card += `
+  <div class="card">
+  <img class="cardImg" src="${filme.poster}" alt="">
+  <div class="descricao">
+  <p><strong>Título: ${filme.title}</strong></p>
+  <p><strong>Ano: ${filme.release_date}</strong></p>
+  </div>
+  </div>
+  `;
+});
+
+cardContainer.innerHTML = card;
