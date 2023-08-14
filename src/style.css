@@ -1,5 +1,4 @@
 
-
 body {
    
     background-color: #76BCE3;
@@ -15,6 +14,7 @@ h1 , h2  {
 h4 {
     font-size: 20px;
     color: white;
+    text-align: center;
 }
 
 #cabecalhoImagem {
