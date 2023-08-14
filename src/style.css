@@ -1,18 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 body {
     background-color: #76BCE3;
     font-family: 'Quicksand', sans-serif;
-    height: auto;
-    border: green solid 2px;
-
+    height: 100vh;
+    width: auto;
 } 
-
-main{
-    border: orangered 5px solid;
-}
-
 
 h1 , h2 , h4 {
     color: white;
+    text-align: center;
 }
 
 #cabecalhoImagem {
@@ -27,69 +29,59 @@ h1 , h2 , h4 {
     z-index: -1;
     overflow: hidden;
     opacity: 80%;
-    border: red solid 2px;
 }
 
 #titulo {
-    top: 15%;
-    left: 50%;
-    position: relative;
-    transform: translate(-50%, -50%);
+    margin-top: 14px;
     text-align: center;
+}
+
+h1{
+    font-size: 20px;
+    font-style: italic;
+    line-height: 30px;
+}
+
+h2{
+    font-size: 15px;
+    font-style: italic;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 42px;
+    color: #0A0101;
+    font-size: 15px;
+    line-height: 30px;
+   margin-bottom: 10px;
+}
+
+#ordenarAz select{
+    margin-right: 30px;
     
-    z-index: 1;
-    border: blue solid 2px;
+   
 }
 
-#barraBusca {
-    position: relative;
-    top: 10%;
-    border: yellow solid 2px;
-    display: grid;
-    grid-template-columns: 9% 10% 65%;
-    gap: 5%;
-    align-content: center;
-}
 
-#pesquisar {
-    text-align: end;
-}
-#ordenarAz {
-    text-align: end;
-}
-
-#score {
-    position: relative;
-    border: white solid 2px;
-    top: 10%;
-    text-align: center;
+.cardContainer{
+margin-top: -100px;
+z-index: 1;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+justify-items: center;
+gap: 30px;
 }
 
 .card {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    border: #f0f 1px solid;
-    row-gap: 18px;
-    gap: 15px;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    
-}
-
-.card img {
-    width: 243px;
-    height: 348px;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 20%;
-    
-}
-
-.descricao {
-    border: black 2px solid;
-    height: 100px;
-    margin-top: 400px;
+    width: 306px;
+    height: 415px;
+    border: 2px solid red;
+    border-radius: 8px;
+    background: #9CD4D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 15px;
 }
