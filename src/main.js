@@ -8,14 +8,16 @@ let card = "";
 
 ghibli.map((filme) => {
   card += `
-  <div class="card">
+  
+  <div class="containerImg">
   <img class="cardImg" src="${filme.poster}" alt="">
   <div class="descricao">
-  <p><strong>Título: ${filme.title}</strong></p>
-  <p><strong>Ano: ${filme.release_date}</strong></p>
+  <p id="filme"><strong>Título: ${filme.title}</strong></p>
+  <p id="ano"><strong>Ano: ${filme.release_date}</strong></p>
   </div>
   </div>
-  `;
+  
+  `
 });
 
 cardContainer.innerHTML = card;

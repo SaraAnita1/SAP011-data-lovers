@@ -1,17 +1,19 @@
+
+
 body {
+   
     background-color: #76BCE3;
     font-family: 'Quicksand', sans-serif;
-    height: auto;
-    border: green solid 2px;
-
+    
 } 
 
-main{
-    border: orangered 5px solid;
+h1 , h2  {
+    color: white;
+    font-size: 30px
 }
 
-
-h1 , h2 , h4 {
+h4 {
+    font-size: 20px;
     color: white;
 }
 
@@ -27,24 +29,22 @@ h1 , h2 , h4 {
     z-index: -1;
     overflow: hidden;
     opacity: 80%;
-    border: red solid 2px;
+    margin-left: 3px;
+  
 }
 
 #titulo {
-    top: 15%;
+    margin-top: -350px;
     left: 50%;
     position: relative;
     transform: translate(-50%, -50%);
     text-align: center;
-    
     z-index: 1;
-    border: blue solid 2px;
 }
 
 #barraBusca {
     position: relative;
-    top: 10%;
-    border: yellow solid 2px;
+    margin-top: -3%;
     display: grid;
     grid-template-columns: 9% 10% 65%;
     gap: 5%;
@@ -53,43 +53,59 @@ h1 , h2 , h4 {
 
 #pesquisar {
     text-align: end;
+
 }
 #ordenarAz {
     text-align: end;
 }
 
 #score {
-    position: relative;
-    border: white solid 2px;
-    top: 10%;
+    margin-top: 5%;
     text-align: center;
 }
 
 .card {
-    width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    border: #f0f 1px solid;
-    row-gap: 18px;
-    gap: 15px;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    
+    grid-template-rows: repeat(7);
+    row-gap: 2%;
+    gap: 1%;
+    justify-content: center;
 }
 
-.card img {
+.containerImg {
+    width: 306px;
+    height: 415px;
+    border-radius: 8px;
+    background: #9CD4D1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 17%;
+}
+
+.cardImg {
     width: 243px;
     height: 348px;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 20%;
-    
+    margin-top: 8%;
+    margin-left: 10%;
 }
 
 .descricao {
-    border: black 2px solid;
-    height: 100px;
-    margin-top: 400px;
+    width: 243px;
+    height: 30px;
+    font-size: 60%;
+    margin-left: 10%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 25%;
+    gap: 5%;
+    align-content: center;
+    text-align: justify;
+}
+
+#filme {
+    text-align: start;
+}
+
+#ano {
+    text-align: end;
 }

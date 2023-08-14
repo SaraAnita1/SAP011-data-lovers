@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <main>
+    <body>
       <div id="cabecalhoImagem">
+      </div>
         <div id="titulo">
           <h1>STUDIO GHIBLI</h1>
           <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
@@ -20,23 +20,25 @@
               <option value="Z-A">Z-A</option>
             </select>
           </div>
-
+   
           <input type="button" value="Estatísticas" />
           <div id="pesquisar">
-            <input
-              id="pesquisar"
-              type="search"
-              placeholder="Pesquise aqui o filme"
-            />
+            <input id="pesquisar" type="search" placeholder="Pesquise aqui o filme"/>
             <button>Pesquisar</button>
           </div>
         </header>
-        <h4 id="score">% do score</h4>
-      </div>
-      <div class="card">
-        <div class="descricao"></div>
-      </div>
-    </main>
-    <script src="main.js" type="module"></script>
-  </body>
+          <h4 id="score">% do score</h4>
+      <main>
+        <div class="card">
+          <!-- Main.js: todas as informações do map ficarão guardadas nessa div "card"-->
+          <!-- <div class="verde">
+          <div><img class="cardImg" src="" alt=""></div>
+          <div class="descricao">
+          <p id="filme"><strong>Título:</strong></p>
+          <p id="ano"><strong>Ano:</strong></p>
+          </div> -->
+        </div>
+      </main>
+   </body>
+  <script src="main.js" type="module"></script>
 </html>
