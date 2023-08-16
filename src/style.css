@@ -43,7 +43,7 @@ h4 {
   position: relative;
   margin-top: -3%;
   display: grid;
-  grid-template-columns: 9% 10% 65%;
+  grid-template-columns: 9% 10% 55%;
   gap: 5%;
   align-content: center;
 }
