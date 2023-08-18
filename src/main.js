@@ -1,7 +1,5 @@
 import dados from "./data/ghibli/ghibli.js";
 
-
-
 const cardContainer = document.querySelector(".card");
 
 const ghibli = dados.films;
@@ -33,28 +31,21 @@ ghibli.map((filme) => {
 
 cardContainer.innerHTML = card;
 
-const filtroDiretor = document.getElementById('filtroDiretor');
+const filtroDiretor = document.getElementById("filtroDiretor");
 
 function atualizarVisibilidadeFilmes() {
   const diretorSelecionado = filtroDiretor.value;
-  const filmes = cardContainer.querySelectorAll('.filme');
+  const filmes = cardContainer.querySelectorAll(".filme");
 
-  filmes.forEach(filme => {
-    const diretorFilme = filme.getAttribute('data-director');
+  filmes.forEach((filme) => {
+    const diretorFilme = filme.getAttribute("data-director");
 
-    if (diretorSelecionado === 'todos' || diretorFilme === diretorSelecionado) {
-      filme.style.display = 'block'; // Mostrar o filme
+    if (diretorSelecionado === "todos" || diretorFilme === diretorSelecionado) {
+      filme.style.display = "block"; // Mostrar o filme
     } else {
-      filme.style.display = 'none'; // Ocultar o filme
+      filme.style.display = "none"; // Ocultar o filme
     }
   });
 }
 
-filtroDiretor.addEventListener('change', atualizarVisibilidadeFilmes);
-
-
-
-
-
-
-
+filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);

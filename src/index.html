@@ -12,45 +12,48 @@
       rel="stylesheet"
     />
   </head>
-    <body>
-      <div id="cabecalhoImagem">
+  <body>
+    <div id="cabecalhoImagem"></div>
+    <div id="titulo">
+      <h1>STUDIO GHIBLI</h1>
+      <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
+    </div>
+    <header id="barraBusca">
+      <div id="ordenarAz">
+        <select name="ordenar">
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
       </div>
-        <div id="titulo">
-          <h1>STUDIO GHIBLI</h1>
-          <h2>Conheça os filmes do Studio Ghibli e suas informações</h2>
-        </div>
-        <header id="barraBusca">
-          <div id="ordenarAz">
-            <select name="ordenar">
-              <option value="A-Z">A-Z</option>
-              <option value="Z-A">Z-A</option>
-            </select>
-          </div>
-          <div>
-            <select id="filtroDiretor" name="filtrarporDiretor">
-              <option value="todos">Todos os diretores</option>
-              <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-              <option value="Isao Takahata">Isao Takahata</option>
-            </select>
-          </div>
-          
-          <div id="pesquisar">
-            <input id="pesquisar" type="search" placeholder="Pesquise aqui o filme"/>
-            <button>Pesquisar</button>
-          </div>
-        </header>
-          <h4 id="score">% do score</h4>
-      <main>
-        <div class="card">
-          <!-- Main.js: todas as informações do map ficarão guardadas nessa div "card"-->
-          <!-- <div class="verde">
+      <div>
+        <select id="filtroDiretor" name="filtrarporDiretor">
+          <option value="todos">Todos os diretores</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+        </select>
+      </div>
+
+      <div id="pesquisar">
+        <input
+          id="campoPesquisar"
+          type="search"
+          placeholder="Pesquise aqui o filme"
+        />
+        <button type="submit">Pesquisar</button>
+      </div>
+    </header>
+    <h4 id="score">% do score</h4>
+    <main>
+      <div class="card">
+        <!-- Main.js: todas as informações do map ficarão guardadas nessa div "card"-->
+        <!-- <div class="verde">
           <div><img class="cardImg" src="" alt=""></div>
           <div class="descricao">
           <p id="filme"><strong>Título:</strong></p>
           <p id="ano"><strong>Ano:</strong></p>
           </div> -->
-        </div>
-      </main>
-   </body>
+      </div>
+    </main>
+  </body>
   <script src="main.js" type="module"></script>
 </html>
