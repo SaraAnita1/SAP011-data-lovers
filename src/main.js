@@ -9,7 +9,7 @@ let card = "";
 ghibli.map((filme) => {
   card += `
 
-  <div class="containerImg filme" data-director="${filme.director}">
+  <div class="containerImg filme" data-director="${filme.director}" data-title=${filme.title}>
      <div class="flip">
         <div class="front">
           <img class="cardImg" src="${filme.poster}" alt="">
@@ -49,3 +49,63 @@ function atualizarVisibilidadeFilmes() {
 }
 
 filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);
+
+const ordenarAz = document.getElementById("ordenarAz");
+
+function atualizarVisibilidadeAz() {
+  const ordenar = ordenarAz.value;
+  const filmesContainer = document.querySelector(".card");
+
+  //o método sort() é um método de array, não de string. Para ordenar uma lista de filmes, é necessário primeiro criar um array de objetos de filme com seus respectivos títulos e, em seguida, ordená-los.
+  const nomesfilmes = Array.from(filmesContainer.querySelectorAll(".filme"));
+
+  nomesfilmes.sort((a, b) => {
+    const tituloA = a.getAttribute("data-title");
+    const tituloB = b.getAttribute("data-title");
+
+    if (ordenar === "A-Z") {
+      return tituloA.localeCompare(tituloB);
+    } else if (ordenar === "Z-A") {
+      return tituloB.localeCompare(tituloA);
+    }
+  });
+
+  // Limpa o container antes de reordenar os filmes
+  filmesContainer.innerHTML = "";
+
+  // Adiciona os filmes reordenados de volta ao container
+  nomesfilmes.forEach((filme) => {
+    filmesContainer.appendChild(filme);
+  });
+}
+
+ordenarAz.addEventListener("change", atualizarVisibilidadeAz);
+
+const barraBusca = document.getElementById("campoPesquisar");
+
+function atualizarVisibilidade() {
+  const diretorSelecionado = filtroDiretor.value.toLowerCase();
+  const termoBusca = barraBusca.value.trim().toLowerCase();
+
+  const filmes = cardContainer.querySelectorAll(".filme");
+
+  filmes.forEach((filme) => {
+    const diretorFilme = filme.getAttribute("data-director").toLowerCase();
+    const tituloFilme = filme
+      .querySelector("#filme strong")
+      .textContent.toLowerCase();
+
+    const diretorMatch =
+      diretorSelecionado === "todos" || diretorFilme === diretorSelecionado;
+    const buscaMatch = tituloFilme.includes(termoBusca);
+
+    if (diretorMatch && buscaMatch) {
+      filme.style.display = "block"; // Mostrar o filme
+    } else {
+      filme.style.display = "none"; // Ocultar o filme
+    }
+  });
+}
+
+filtroDiretor.addEventListener("change", atualizarVisibilidade);
+barraBusca.addEventListener("input", atualizarVisibilidade);

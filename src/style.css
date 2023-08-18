@@ -42,10 +42,12 @@ h4 {
 #barraBusca {
   position: relative;
   margin-top: -3%;
+  margin-left: 2%;
   display: grid;
-  grid-template-columns: 9% 10% 55%;
+  grid-template-columns: 9% 20% 55%;
   gap: 5%;
   align-content: center;
+  
 }
 
 #pesquisar {
@@ -128,7 +130,7 @@ align-items: center;
   text-align: justify;
 }
 
-#filme {
+.filme {
   text-align: start;
 }
 
