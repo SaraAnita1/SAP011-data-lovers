@@ -82,3 +82,5 @@ function atualizarVisibilidade() {
 
 filtroDiretor.addEventListener("change", atualizarVisibilidade);
 barraBusca.addEventListener("input", atualizarVisibilidade);
+
+const estatistica = document.querySelector("h4");
