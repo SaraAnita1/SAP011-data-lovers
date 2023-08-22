@@ -41,5 +41,6 @@ export function ordenacaoDiretor(filmes, diretorSelecionado) {
     } else {
       filme.style.display = "none"; // Ocultar o filme
     }
-  });
+ });
+
 }

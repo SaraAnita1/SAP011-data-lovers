@@ -38,12 +38,34 @@ ghibli.map((filme) => {
 cardContainer.innerHTML = card;
 
 const filtroDiretor = document.getElementById("filtroDiretor");
+const porcentagemContainer = document.getElementById("porcentagemContainer"); // Div onde a porcentagem será exibida
+const filmes = cardContainer.querySelectorAll(".filme");
+
+function atualizarPorcentagens(diretorSelecionado) {
+  
+  const totalFilmes = filmes.length;
+
+  const filmesDoDiretor = Array.from(filmes).filter(filme => filme.getAttribute("data-director") === diretorSelecionado);
+  const porcentagem = (filmesDoDiretor.length / totalFilmes) * 100;
+  porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
+  const porcentagemElement = document.createElement("p");
+  porcentagemElement.textContent = `${diretorSelecionado}: ${porcentagem}%`;
+  porcentagemContainer.appendChild(porcentagemElement);
+  
+}
 
 function atualizarVisibilidadeFilmes() {
   const diretorSelecionado = filtroDiretor.value;
-  const filmes = cardContainer.querySelectorAll(".filme");
+  // const filmes = cardContainer.querySelectorAll(".filme");
 
   ordenacaoDiretor(filmes, diretorSelecionado);
+
+  if (diretorSelecionado !== "todos") {
+    atualizarPorcentagens(diretorSelecionado);
+  } else {
+    porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
+    }
+    
 }
 
 filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);
@@ -83,4 +105,4 @@ function atualizarVisibilidade() {
 filtroDiretor.addEventListener("change", atualizarVisibilidade);
 barraBusca.addEventListener("input", atualizarVisibilidade);
 
-const estatistica = document.querySelector("h4");
+
