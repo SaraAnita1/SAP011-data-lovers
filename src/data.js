@@ -1,3 +1,4 @@
+
 export function ordenacao(nomesfilmes, ordenar) {
   nomesfilmes.sort((a, b) => {
     const tituloA = a.getAttribute("data-title");
@@ -41,6 +42,6 @@ export function ordenacaoDiretor(filmes, diretorSelecionado) {
     } else {
       filme.style.display = "none"; // Ocultar o filme
     }
- });
+  });
 
 }

@@ -64,7 +64,7 @@ function atualizarVisibilidadeFilmes() {
     atualizarPorcentagens(diretorSelecionado);
   } else {
     porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
-    }
+  }
     
 }
 
