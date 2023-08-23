@@ -10,10 +10,10 @@ const cardContainer = document.querySelector(".card");
 
 const ghibli = dados.films;
 
-let card = "";
-
-ghibli.map((filme) => {
-  card += `
+function criandoCardsFilmes(array) {
+  let card = "";
+  array.map((filme) => {
+    card += `
 
   <div class="containerImg filme" data-director="${filme.director}" data-title=${filme.title}>
      <div class="flip">
@@ -33,25 +33,28 @@ ghibli.map((filme) => {
   </div>
   
   `;
-});
+  });
 
-cardContainer.innerHTML = card;
+  cardContainer.innerHTML = card;
+}
+
+criandoCardsFilmes(ghibli);
 
 const filtroDiretor = document.getElementById("filtroDiretor");
 const porcentagemContainer = document.getElementById("porcentagemContainer"); // Div onde a porcentagem será exibida
 const filmes = cardContainer.querySelectorAll(".filme");
 
 function atualizarPorcentagens(diretorSelecionado) {
-  
   const totalFilmes = filmes.length;
 
-  const filmesDoDiretor = Array.from(filmes).filter(filme => filme.getAttribute("data-director") === diretorSelecionado);
+  const filmesDoDiretor = Array.from(filmes).filter(
+    (filme) => filme.getAttribute("data-director") === diretorSelecionado
+  );
   const porcentagem = (filmesDoDiretor.length / totalFilmes) * 100;
   porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
   const porcentagemElement = document.createElement("p");
   porcentagemElement.textContent = `${diretorSelecionado}: ${porcentagem}%`;
   porcentagemContainer.appendChild(porcentagemElement);
-  
 }
 
 function atualizarVisibilidadeFilmes() {
@@ -65,7 +68,6 @@ function atualizarVisibilidadeFilmes() {
   } else {
     porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
   }
-    
 }
 
 filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);
@@ -77,17 +79,13 @@ function atualizarVisibilidadeAz() {
   const filmesContainer = document.querySelector(".card");
 
   //o método sort() é um método de array, não de string. Para ordenar uma lista de filmes, é necessário primeiro criar um array de objetos de filme com seus respectivos títulos e, em seguida, ordená-los.
-  let nomesfilmes = Array.from(filmesContainer.querySelectorAll(".filme"));
+  // let nomesfilmes = Array.from(filmesContainer.querySelectorAll(".filme"));
 
-  nomesfilmes = ordenacao(nomesfilmes, ordenar);
+  const ghibliOrdenado = ordenacao(ghibli, ordenar);
 
   // Limpa o container antes de reordenar os filmes
   filmesContainer.innerHTML = "";
-
-  // Adiciona os filmes reordenados de volta ao container
-  nomesfilmes.forEach((filme) => {
-    filmesContainer.appendChild(filme);
-  });
+  criandoCardsFilmes(ghibliOrdenado);
 }
 
 ordenarAz.addEventListener("change", atualizarVisibilidadeAz);
@@ -104,5 +102,3 @@ function atualizarVisibilidade() {
 
 filtroDiretor.addEventListener("change", atualizarVisibilidade);
 barraBusca.addEventListener("input", atualizarVisibilidade);
-
-

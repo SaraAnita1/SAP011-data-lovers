@@ -1,8 +1,7 @@
-
 export function ordenacao(nomesfilmes, ordenar) {
   nomesfilmes.sort((a, b) => {
-    const tituloA = a.getAttribute("data-title");
-    const tituloB = b.getAttribute("data-title");
+    const tituloA = a.title;
+    const tituloB = b.title;
 
     if (ordenar === "A-Z") {
       return tituloA.localeCompare(tituloB);
@@ -43,5 +42,4 @@ export function ordenacaoDiretor(filmes, diretorSelecionado) {
       filme.style.display = "none"; // Ocultar o filme
     }
   });
-
 }
