@@ -27,18 +27,18 @@ describe("ordenacao", () => {
 
   it("colocar em ordem Z-A", () => {
     const input = [
-      "The Cat Returns",
-      "When Marnie Was There",
-      "Whisper of the Heart",
+      { title: "The Cat Returns" },
+      { title: "When Marnie Was There" },
+      { title: "Whisper of the Heart" },
     ];
     const expectedOutput = [
-      "Whisper of the Heart",
-      "When Marnie Was There",
-      "The Cat Returns",
+      { title: "Whisper of the Heart" },
+      { title: "When Marnie Was There" },
+      { title: "The Cat Returns" },
     ];
 
     // Chama a função de ordenação
-    const result = ordenacao(input);
+    const result = ordenacao(input, "Z-A");
 
     // Verifica se a saída da função é igual à saída esperada
     expect(result).toEqual(expectedOutput);

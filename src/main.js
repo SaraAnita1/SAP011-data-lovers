@@ -15,7 +15,7 @@ function criandoCardsFilmes(array) {
   array.map((filme) => {
     card += `
 
-  <div class="containerImg filme" data-director="${filme.director}" data-title=${filme.title}>
+  <div class="containerImg filme oculto visivel" data-director="${filme.director}" data-title=${filme.title}>
      <div class="flip">
         <div class="front">
           <img class="cardImg" src="${filme.poster}" alt="">
@@ -93,12 +93,14 @@ ordenarAz.addEventListener("change", atualizarVisibilidadeAz);
 const barraBusca = document.getElementById("campoPesquisar");
 
 function atualizarVisibilidade() {
-  const diretorSelecionado = filtroDiretor.value.toLowerCase();
+  // const diretorSelecionado = filtroDiretor.value.toLowerCase();
   const termoBusca = barraBusca.value.trim().toLowerCase();
-  const filmes = cardContainer.querySelectorAll(".filme");
+  // const filmes = cardContainer.querySelectorAll(".filme");
 
-  pesquisa(filmes, termoBusca, diretorSelecionado);
+  const ghibliPesquisa = pesquisa(ghibli, termoBusca);
+
+  criandoCardsFilmes(ghibliPesquisa);
 }
 
-filtroDiretor.addEventListener("change", atualizarVisibilidade);
+// filtroDiretor.addEventListener("change", atualizarVisibilidade);
 barraBusca.addEventListener("input", atualizarVisibilidade);

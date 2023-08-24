@@ -154,3 +154,12 @@ footer {
 a{
   text-decoration: none;
 }
+
+.oculto {
+  display: none;
+}
+
+.visivel {
+  display: block;
+  /* ou qualquer valor que você queira para exibir o elemento */
+}
