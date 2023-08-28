@@ -1,6 +1,6 @@
-import { ordenacao } from "../src/data";
+import { filtrarPorDiretor, ordenacao, atualizarPorcentagens, pesquisa } from "../src/data";
 
-import { pesquisa } from "../src/data";
+
 
 describe("ordenacao", () => {
   it("is a function", () => {
@@ -47,16 +47,6 @@ describe("ordenacao", () => {
   });
 });
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
-
 test("A função pesquisa filtra corretamente os filmes", () => {
   const filmes = [
     { title: "The Cat Returns" },
@@ -87,4 +77,51 @@ it("pesquisar por nome do filme que não existe", () => {
   const resultado = pesquisa(filmes, termoBusca);
   // Verifica se a saída da função é igual à saída esperada
   expect(resultado).toEqual(expectedOutput);
+});
+
+describe("filtrar por Diretor", () => {
+  it("is a function", () => {
+    // Verifica se filtrar por diretor é uma função
+    expect(typeof filtrarPorDiretor).toBe("function");
+  });
+
+  it("Fazer a filtragem de acordo com o diretor selecionado", () => {
+    const input = [
+      { director: "Hayao Miyazaki", title: "Castle in the Sky" },
+     
+    ];
+    const expectedOutput = [
+      { director: "Hayao Miyazaki", title: "Castle in the Sky" },
+    ];
+
+    // Chama a função de filtragem
+    const resultado1 = filtrarPorDiretor(input, "Hayao Miyazaki");
+
+    // Verifica se a saída da função é igual à saída esperada
+    expect(resultado1).toEqual(expectedOutput);
+  });
+});
+
+
+describe("verificar se as porcentagens estão corretas de acordo com o diretor selecionado", () => {
+  it("is a function", () => {
+    // Verifica se atualizar porcentagens é uma função
+    expect(typeof atualizarPorcentagens).toBe("function");
+  });
+
+  it("Calcular a porcentagem de filmes do diretor selecionado", () => {
+    const input = [
+      { director: "Hayao Miyazaki", title: "Castle in the Sky" },
+    ];
+    
+    // Chama a função de atualização de porcentagens
+    const porcentagem = atualizarPorcentagens(input, "Hayao Miyazaki");
+
+    // Calcula a porcentagem esperada manualmente
+    const filmesDoDiretor = input.filter(filme => filme.director === "Hayao Miyazaki");
+    const porcentagemEsperada = (filmesDoDiretor.length / input.length) * 100;
+
+    // Verifica se a porcentagem calculada pela função é igual à esperada
+    expect(porcentagem).toEqual(porcentagemEsperada);
+  });
 });

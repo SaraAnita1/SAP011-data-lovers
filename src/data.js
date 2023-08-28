@@ -1,6 +1,3 @@
-// import ghibli from "./data/ghibli/ghibli";
-
-// import ghibli from "./data/ghibli/ghibli";
 
 export function ordenacao(nomesfilmes, ordenar) {
   nomesfilmes.sort((a, b) => {

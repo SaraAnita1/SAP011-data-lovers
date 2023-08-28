@@ -44,40 +44,27 @@ criandoCardsFilmes(filmes);
 
 const filtroDiretor = document.getElementById("filtroDiretor");
 
-const diretorSelecionado =
-  filtroDiretor.options[filtroDiretor.selectedIndex].value;
-atualizarPorcentagens(filmes, diretorSelecionado);
-
 const porcentagemContainer = document.getElementById("porcentagemContainer"); // Div onde a porcentagem será exibida
 
 function atualizarVisibilidadeFilmes() {
   // const filmes = cardContainer.querySelectorAll(".filme");
   const diretorSelecionado =
     filtroDiretor.options[filtroDiretor.selectedIndex].value;
-
   if (diretorSelecionado !== "todos") {
-    atualizarPorcentagens(filmes, diretorSelecionado);
+    const filmesDoDiretor = filtrarPorDiretor(filmes, diretorSelecionado);
+    criandoCardsFilmes(filmesDoDiretor);
+
+    const resultadoPorcentagem = atualizarPorcentagens(filmes, diretorSelecionado);
+
+    porcentagemContainer.innerHTML = "";
+    const porcentagemElement = document.createElement("p");
+    porcentagemElement.textContent = `${diretorSelecionado}: ${resultadoPorcentagem}%`;
+    porcentagemContainer.appendChild(porcentagemElement);
   } else {
-    porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
+    porcentagemContainer.innerHTML = "";
+    criandoCardsFilmes(filmes);
   }
-
-  // const filmesDoDiretor = Array.from(filmes).filter(
-  //   (filme) => filme.getAttribute("data-director") === diretorSelecionado
-  // );
-
-  const filmesDoDiretor = filtrarPorDiretor(filmes, diretorSelecionado);
-  criandoCardsFilmes(filmesDoDiretor);
-
-  const resultadoPorcentagem = atualizarPorcentagens(
-    filmes,
-    diretorSelecionado
-  );
-
-  porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
-  const porcentagemElement = document.createElement("p");
-  porcentagemElement.textContent = `${diretorSelecionado}: ${resultadoPorcentagem}%`;
-  porcentagemContainer.appendChild(porcentagemElement);
-}
+} 
 
 filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);
 
@@ -86,10 +73,6 @@ const ordenarAz = document.getElementById("ordenarAz");
 function atualizarVisibilidadeAz() {
   const ordenar = ordenarAz.value;
   const filmesContainer = document.querySelector(".card");
-
-  //o método sort() é um método de array, não de string. Para ordenar uma lista de filmes, é necessário primeiro criar um array de objetos de filme com seus respectivos títulos e, em seguida, ordená-los.
-  // let nomesfilmes = Array.from(filmesContainer.querySelectorAll(".filme"));
-
   const ghibliOrdenado = ordenacao(filmes, ordenar);
 
   // Limpa o container antes de reordenar os filmes
@@ -102,14 +85,14 @@ ordenarAz.addEventListener("change", atualizarVisibilidadeAz);
 const barraBusca = document.getElementById("campoPesquisar");
 
 function atualizarVisibilidade() {
-  // const diretorSelecionado = filtroDiretor.value.toLowerCase();
+  
   const termoBusca = barraBusca.value.trim().toLowerCase();
-  // const filmes = cardContainer.querySelectorAll(".filme");
+  
 
   const ghibliPesquisa = pesquisa(filmes, termoBusca);
 
   criandoCardsFilmes(ghibliPesquisa);
 }
 
-// filtroDiretor.addEventListener("change", atualizarVisibilidade);
+
 barraBusca.addEventListener("input", atualizarVisibilidade);
