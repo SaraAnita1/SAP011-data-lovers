@@ -72,3 +72,19 @@ test("A função pesquisa filtra corretamente os filmes", () => {
 
   expect(resultados).toEqual(resultadoEsperado);
 });
+
+it("pesquisar por nome do filme que não existe", () => {
+  const filmes = [
+    { title: 'From Up on Poppy Hill' },
+    { title: "Castle in the Sky" },
+    { title: "Grave of the Fireflies" },
+  ];
+  const termoBusca = 'Xuxa'; // Termo de pesquisa
+  
+  const expectedOutput = [];
+  
+  // Chama a função de pesquisa
+  const resultado = pesquisa(filmes, termoBusca);
+  // Verifica se a saída da função é igual à saída esperada
+  expect(resultado).toEqual(expectedOutput);
+});
