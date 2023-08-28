@@ -1,5 +1,7 @@
 import { ordenacao } from "../src/data";
 
+import { pesquisa } from "../src/data";
+
 describe("ordenacao", () => {
   it("is a function", () => {
     // Verifica se `ordenacao` é uma função
@@ -54,3 +56,19 @@ describe("ordenacao", () => {
 //     expect(anotherExample()).toBe('OMG');
 //   });
 // });
+
+test("A função pesquisa filtra corretamente os filmes", () => {
+  const filmes = [
+    { title: "The Cat Returns" },
+    { title: "When Marnie Was There" },
+    { title: "Whisper of the Heart" }, // Adicione um filme com título esperado
+  ];
+
+  const termoBusca = "whis";
+
+  const resultados = pesquisa(filmes, termoBusca);
+
+  const resultadoEsperado = [{ title: "Whisper of the Heart" }];
+
+  expect(resultados).toEqual(resultadoEsperado);
+});

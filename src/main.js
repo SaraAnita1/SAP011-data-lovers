@@ -4,11 +4,13 @@ import { ordenacao } from "./data.js";
 
 import { pesquisa } from "./data.js";
 
-import { ordenacaoDiretor } from "./data.js";
+import { filtrarPorDiretor } from "./data.js";
+
+import { atualizarPorcentagens } from "./data.js";
 
 const cardContainer = document.querySelector(".card");
 
-const ghibli = dados.films;
+const filmes = dados.films;
 
 function criandoCardsFilmes(array) {
   let card = "";
@@ -38,36 +40,43 @@ function criandoCardsFilmes(array) {
   cardContainer.innerHTML = card;
 }
 
-criandoCardsFilmes(ghibli);
+criandoCardsFilmes(filmes);
 
 const filtroDiretor = document.getElementById("filtroDiretor");
+
+const diretorSelecionado =
+  filtroDiretor.options[filtroDiretor.selectedIndex].value;
+atualizarPorcentagens(filmes, diretorSelecionado);
+
 const porcentagemContainer = document.getElementById("porcentagemContainer"); // Div onde a porcentagem será exibida
-const filmes = cardContainer.querySelectorAll(".filme");
-
-function atualizarPorcentagens(diretorSelecionado) {
-  const totalFilmes = filmes.length;
-
-  const filmesDoDiretor = Array.from(filmes).filter(
-    (filme) => filme.getAttribute("data-director") === diretorSelecionado
-  );
-  const porcentagem = (filmesDoDiretor.length / totalFilmes) * 100;
-  porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
-  const porcentagemElement = document.createElement("p");
-  porcentagemElement.textContent = `${diretorSelecionado}: ${porcentagem}%`;
-  porcentagemContainer.appendChild(porcentagemElement);
-}
 
 function atualizarVisibilidadeFilmes() {
-  const diretorSelecionado = filtroDiretor.value;
   // const filmes = cardContainer.querySelectorAll(".filme");
-
-  ordenacaoDiretor(filmes, diretorSelecionado);
+  const diretorSelecionado =
+    filtroDiretor.options[filtroDiretor.selectedIndex].value;
 
   if (diretorSelecionado !== "todos") {
-    atualizarPorcentagens(diretorSelecionado);
+    atualizarPorcentagens(filmes, diretorSelecionado);
   } else {
     porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
   }
+
+  // const filmesDoDiretor = Array.from(filmes).filter(
+  //   (filme) => filme.getAttribute("data-director") === diretorSelecionado
+  // );
+
+  const filmesDoDiretor = filtrarPorDiretor(filmes, diretorSelecionado);
+  criandoCardsFilmes(filmesDoDiretor);
+
+  const resultadoPorcentagem = atualizarPorcentagens(
+    filmes,
+    diretorSelecionado
+  );
+
+  porcentagemContainer.innerHTML = ""; // Limpar as porcentagens exibidas
+  const porcentagemElement = document.createElement("p");
+  porcentagemElement.textContent = `${diretorSelecionado}: ${resultadoPorcentagem}%`;
+  porcentagemContainer.appendChild(porcentagemElement);
 }
 
 filtroDiretor.addEventListener("change", atualizarVisibilidadeFilmes);
@@ -81,7 +90,7 @@ function atualizarVisibilidadeAz() {
   //o método sort() é um método de array, não de string. Para ordenar uma lista de filmes, é necessário primeiro criar um array de objetos de filme com seus respectivos títulos e, em seguida, ordená-los.
   // let nomesfilmes = Array.from(filmesContainer.querySelectorAll(".filme"));
 
-  const ghibliOrdenado = ordenacao(ghibli, ordenar);
+  const ghibliOrdenado = ordenacao(filmes, ordenar);
 
   // Limpa o container antes de reordenar os filmes
   filmesContainer.innerHTML = "";
@@ -97,7 +106,7 @@ function atualizarVisibilidade() {
   const termoBusca = barraBusca.value.trim().toLowerCase();
   // const filmes = cardContainer.querySelectorAll(".filme");
 
-  const ghibliPesquisa = pesquisa(ghibli, termoBusca);
+  const ghibliPesquisa = pesquisa(filmes, termoBusca);
 
   criandoCardsFilmes(ghibliPesquisa);
 }

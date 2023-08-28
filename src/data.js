@@ -1,5 +1,7 @@
 // import ghibli from "./data/ghibli/ghibli";
 
+// import ghibli from "./data/ghibli/ghibli";
+
 export function ordenacao(nomesfilmes, ordenar) {
   nomesfilmes.sort((a, b) => {
     const tituloA = a.title;
@@ -19,15 +21,14 @@ export function pesquisa(filmes, termoBusca) {
     filme.title.toLowerCase().includes(termoBusca)
   );
 }
+//refazer a logica
+export function filtrarPorDiretor(filmes, diretorSelecionado) {
+  return filmes.filter((filme) => filme.director.includes(diretorSelecionado));
+}
 
-export function ordenacaoDiretor(filmes, diretorSelecionado) {
-  filmes.forEach((filme) => {
-    const diretorFilme = filme.getAttribute("data-director");
+export function atualizarPorcentagens(filmes, diretorSelecionado) {
+  const filmesDoDiretor = filtrarPorDiretor(filmes, diretorSelecionado);
+  const porcentagem = (filmesDoDiretor.length / filmes.length) * 100;
 
-    if (diretorSelecionado === "todos" || diretorFilme === diretorSelecionado) {
-      filme.style.display = "block"; // Mostrar o filme
-    } else {
-      filme.style.display = "none"; // Ocultar o filme
-    }
-  });
+  return porcentagem;
 }
