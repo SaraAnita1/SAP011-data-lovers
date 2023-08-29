@@ -47,7 +47,7 @@ const filtroDiretor = document.getElementById("filtroDiretor");
 const porcentagemContainer = document.getElementById("porcentagemContainer"); // Div onde a porcentagem será exibida
 
 function atualizarVisibilidadeFilmes() {
-  // const filmes = cardContainer.querySelectorAll(".filme");
+ 
   const diretorSelecionado =
     filtroDiretor.options[filtroDiretor.selectedIndex].value;
   if (diretorSelecionado !== "todos") {

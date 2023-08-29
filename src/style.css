@@ -6,14 +6,17 @@ body {
   margin: 0;
 }
 
-h1,
+h1 {
+  font-size: 2.5em;
+  color: white;
+}
 h2 {
   color: white;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -44,28 +47,60 @@ h4 {
 
 #barraBusca {
   position: relative;
-  margin-top: -3%;
+  margin-top: -1%;
   margin-left: 2%;
   display: grid;
   grid-template-columns: 9% 20% 55%;
   gap: 5%;
   align-content: center;
-  border: solid 2px red;
 }
 
 #pesquisar {
   text-align: end;
-  border: solid 2px blue;
+  
 }
+#campoPesquisar {
+  width: 28%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  font-family: "Quicksand", sans-serif;
+  
+}
+
 #ordenarAz {
   text-align: end;
-  border: solid 2px yellow;
+  width: 95%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  color: black;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+option {
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+}
+
+#filtroDiretor {
+  width: 60%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  color: black;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 
 #score {
   margin-top: 5%;
   text-align: center;
-  border: solid 2px green;
+
 }
 
 .card {
@@ -75,7 +110,7 @@ h4 {
   row-gap: 2%;
   gap: 20px;
   justify-content: center;
- 
+  margin-top: 5%;
 }
 
 .containerImg {
@@ -167,44 +202,27 @@ a{
   display: block;
 }
 
+/* Estilos para telas menores aqui */
 @media screen and (max-width: 992px) {
-  /* Estilos para telas menores aqui */
   .card {
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   }
  .containerImg {
   margin: auto;
  }
- #barrabusca {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  /* grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; */
-  justify-content: space-between;
-  height: 10vh;
-  
- 
-  }
-  /* #pesquisar {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    
-  }
-  #ordenarAz {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: left;
-  }
-  
-  #score {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: right;
-    
-    
-  } */
-  /* label {
-    justify-self: center;
-  } */
+ #barraBusca {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: -20%;
+  text-align: center;
+ }
+ #ordenarAz, #filtroDiretor {
+  width: 50%;
+ }
+ #campoPesquisar {
+  width: 60%;
+ }
+ #pesquisar{
+  text-align: center;
+ }
 }
