@@ -50,19 +50,22 @@ h4 {
   grid-template-columns: 9% 20% 55%;
   gap: 5%;
   align-content: center;
-  
+  border: solid 2px red;
 }
 
 #pesquisar {
   text-align: end;
+  border: solid 2px blue;
 }
 #ordenarAz {
   text-align: end;
+  border: solid 2px yellow;
 }
 
 #score {
   margin-top: 5%;
   text-align: center;
+  border: solid 2px green;
 }
 
 .card {
@@ -72,6 +75,7 @@ h4 {
   row-gap: 2%;
   gap: 20px;
   justify-content: center;
+ 
 }
 
 .containerImg {
@@ -161,5 +165,46 @@ a{
 
 .visivel {
   display: block;
-  /* ou qualquer valor que você queira para exibir o elemento */
+}
+
+@media screen and (max-width: 992px) {
+  /* Estilos para telas menores aqui */
+  .card {
+    grid-template-columns: 1fr;
+  }
+ .containerImg {
+  margin: auto;
+ }
+ #barrabusca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  justify-content: space-between;
+  height: 10vh;
+  
+ 
+  }
+  /* #pesquisar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+  }
+  #ordenarAz {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: left;
+  }
+  
+  #score {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: right;
+    
+    
+  } */
+  label {
+    justify-self: center;
+  }
 }
