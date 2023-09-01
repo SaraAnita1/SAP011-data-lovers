@@ -1,0 +1,228 @@
+
+
+body {
+  background-color: #76bce3;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: white;
+}
+h2 {
+  color: white;
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#cabecalhoImagem {
+  background-image: url(./assets/Studio_Ghibli_Logo.0.jpg);
+  position: relative;
+  height: 60vh;
+  width: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 80%;
+  margin-left: 3px;
+}
+
+#titulo {
+  margin-top: -350px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+#barraBusca {
+  position: relative;
+  margin-top: -1%;
+  margin-left: 2%;
+  display: grid;
+  grid-template-columns: 9% 20% 55%;
+  gap: 5%;
+  align-content: center;
+}
+
+#pesquisar {
+  text-align: end;
+  
+}
+#campoPesquisar {
+  width: 28%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  font-family: "Quicksand", sans-serif;
+  
+}
+
+#ordenarAz {
+  text-align: end;
+  width: 95%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  color: black;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+option {
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+}
+
+#filtroDiretor {
+  width: 60%;
+  padding: 10px;
+  border: solid 1px rgb(241, 228, 228);
+  border-radius: 5px;
+  background-color:  #9cd4d1;
+  color: black;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+#score {
+  margin-top: 5%;
+  text-align: center;
+
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: repeat(7);
+  row-gap: 2%;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.containerImg {
+  width: 306px;
+  height: 415px;
+  border-radius: 8px;
+  background: #9cd4d1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 17%;
+  perspective: 1000px;
+}
+
+.containerImg:hover .flip {
+  transform: rotateY(180deg);
+}
+
+.flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.front,
+.back {
+  width: 306px;
+  height: 415px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.back {
+  transform: rotateY(180deg);
+  text-align: justify;
+  font-size: 80%;
+display: grid;
+grid-template-columns: 90%;
+justify-content: center;
+align-items: center;
+}
+
+.cardImg {
+  width: 243px;
+  height: 348px;
+  margin-top: 8%;
+  margin-left: 10%;
+}
+
+.descricao {
+  width: 243px;
+  height: 30px;
+  font-size: 60%;
+  margin-left: 10%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 70% 25%;
+  gap: 5%;
+  align-content: center;
+  text-align: justify;
+}
+
+.filme {
+  text-align: start;
+}
+
+#ano {
+  text-align: end;
+}
+
+footer {
+  text-decoration: none;
+  margin-top: 20%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: center;
+  background-color: #9cd4d1;
+  padding-top: 16px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.oculto {
+  display: none;
+}
+
+.visivel {
+  display: block;
+}
+
+/* Estilos para telas menores aqui */
+@media screen and (max-width: 992px) {
+  .card {
+  grid-template-columns: 1fr;
+  }
+ .containerImg {
+  margin: auto;
+ }
+ #barraBusca {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: -20%;
+  text-align: center;
+ }
+ #ordenarAz, #filtroDiretor {
+  width: 50%;
+ }
+ #campoPesquisar {
+  width: 60%;
+ }
+ #pesquisar{
+  text-align: center;
+ }
+}
